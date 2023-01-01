@@ -13,10 +13,10 @@
 
 ##### Variable composition @ .env
 ```
-    HOSTNAME=""
-    USERNAME=""
-    PASSWORD=""
-    DATABASE=""
+HOSTNAME=""
+USERNAME=""
+PASSWORD=""
+DATABASE=""
 ```
 
 ##### Define "$root_directory" @ "../parts/header_pre.php"
@@ -30,4 +30,4 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Setup database connection
 - [x] Setup "User" class
 - [x] Setup "Form" component
-- [] Setup "SuccessStatus" component
+- [ ] Setup "SuccessStatus" component
