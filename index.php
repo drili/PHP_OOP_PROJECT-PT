@@ -1,6 +1,7 @@
 <?php
     // *** Current directory
     $current_directory = dirname(__FILE__);
+    $relative_directory = ".";
 
     // *** Include header.php & files
     require $current_directory . '/parts/header.php';
@@ -10,9 +11,9 @@
     require $current_directory . "/components/Form.php";
 ?> 
 
-<h1>LOCATION: <?php echo $current_directory; ?> index.php</h1>
+<h6>LOCATION: <?php echo $current_directory; ?> index.php</h6>
 
-<section>
+<section class="section-form-element">
     <?php
         $form_elements = [
             [

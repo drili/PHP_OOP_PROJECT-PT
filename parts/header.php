@@ -16,6 +16,15 @@
 
         <!-- *** External scripts -->
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+        <!-- *** CSS -->
+        <link rel="stylesheet" type="text/css" href="<?php echo $relative_directory; ?>/__css/reset.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $relative_directory; ?>/__css/global.css">
+
+        <!-- *** Zurb Foundation -->
+        <!-- Compressed CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+        <!-- Compressed JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Header</h1>

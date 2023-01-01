@@ -21,13 +21,13 @@
     if ($user_result == "USER_EMAIL_EXISTS") {
         $response_status = "USER_EMAIL_EXISTS";
     }
+
+    if($user_result == "USER_CREATED_FALSE") {
+        $response_status = "USER_CREATED_FALSE";
+    }
     
     if ($user_result == "USER_CREATED_TRUE") {
         $response_status = "USER_CREATED_TRUE";
-    }
-    
-    if($user_result == "USER_CREATED_FALSE") {
-        $response_status = "USER_CREATED_FALSE";
     }
 
     $response = [

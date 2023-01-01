@@ -18,6 +18,10 @@
             $stmt_check_email->execute();
             $stmt_check_email_results = $stmt_check_email->get_result();
 
+            if (empty($this->username) || empty($this->password)) {
+                return "USER_CREATED_FALSE";
+            }
+
             if ($stmt_check_email_results->num_rows > 0) {
                 // echo "<script>";
                 //     echo "console.log( '!!! ERROR: User.php: Email already exists!' );";
