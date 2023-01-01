@@ -32,4 +32,6 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Add libraries: CSS Foundation ZURB, jQuery and reset CSS
 - [x] Setup "User" class
 - [x] Setup "Form" component
-- [ ] Setup "SuccessStatus" component
+- [x] Setup "SuccessStatus" (js component) component
+- [ ] Create a "Login" form and use PHP to login the user using "email" and "password" as parameters.
+- [ ] Start CSS styling (global- and component-based styling)

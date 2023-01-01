@@ -11,11 +11,17 @@
     require $current_directory . "/components/Form.php";
 ?> 
 
-<h6>LOCATION: <?php echo $current_directory; ?> index.php</h6>
+<h6>LOCATION: <?php echo $current_directory; ?> register.php</h6>
 
 <section class="section-form-element">
     <?php
         $form_elements = [
+            [
+                'label' => 'Username',
+                'type' => 'text',
+                'name' => 'username',
+                'value' => ''
+            ],
             [
                 'label' => 'Email',
                 'type' => 'email',
@@ -30,17 +36,17 @@
             ]
         ];
 
-        $form = createForm("login-form", "", "", $form_elements, "Login");
+        $form = createForm("register-form", "", "", $form_elements, "Register");
 
         echo $form;
     ?>
 
-    <div class="status-msg form-status-message__login-form">
+    <div class="status-msg form-status-message__register-form">
 
     </div>
 
     <div class="link-redirect">
-        <p>Don't have an account? <a href="./register.php">Register here</a></p>
+        <p>Already an account? <a href="./index.php">Login here</a></p>
     </div>
 </section>
 
@@ -48,4 +54,6 @@
     // *** Include footer.php
     require_once $current_directory . '/parts/footer.php';
 ?>
+
+<script src="__js/index/register-user.js"></script>
 

@@ -1,0 +1,9 @@
+.status-msg {
+    display: none;
+}
+
+.link-redirect,
+.link-redirect > *,
+.link-redirect * {
+    color: blue;
+}
