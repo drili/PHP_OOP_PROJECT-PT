@@ -18,7 +18,7 @@ $(document).ready(function() {
         
         $.ajax({
             type: "POST",
-            url: "./AJAX/index/AJAX_register_user.php",
+            url: "./AJAX/register/AJAX_register_user.php",
             data: formData,
             dataType: "json",
 

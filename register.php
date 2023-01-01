@@ -55,5 +55,5 @@
     require_once $current_directory . '/parts/footer.php';
 ?>
 
-<script src="__js/index/register-user.js"></script>
+<script src="__js/register/register-user.js"></script>
 

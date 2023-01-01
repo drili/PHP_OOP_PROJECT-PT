@@ -9,6 +9,9 @@
 
     // *** Components
     require $current_directory . "/components/Form.php";
+
+    unset($_SESSION["logged_in"]);
+    echo $_SESSION["logged_in"];
 ?> 
 
 <h6>LOCATION: <?php echo $current_directory; ?> index.php</h6>
@@ -49,3 +52,4 @@
     require_once $current_directory . '/parts/footer.php';
 ?>
 
+<script src="__js/index/login-user.js"></script>

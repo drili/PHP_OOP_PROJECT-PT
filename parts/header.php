@@ -1,4 +1,7 @@
 <?php
+    // *** INIT session
+    session_start();
+    
     // *** Current directory
     $current_directory_header = dirname(__FILE__);
 

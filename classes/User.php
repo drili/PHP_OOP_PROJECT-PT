@@ -1,13 +1,20 @@
 <?php
     class User {
+
         public $username;
         public $password;
         public $email;
 
         public function __construct($data) {
-            $this->username = $data["username"];
-            $this->password = $data["password"];
-            $this->email = $data["email"];
+            if (isset($data["username"])) {
+                $this->username = $data["username"];
+            }
+            if (isset($data["password"])) {
+                $this->password = $data["password"];
+            }
+            if (isset($data["email"])) {
+                $this->email = $data["email"];
+            }
         }
 
         public function createUser($db) {
@@ -44,6 +51,31 @@
             } else {
                 return "USER_CREATED_FALSE";
                 // echo "There was an error creating user!";
+            }
+        }
+
+        public function loginUser($db) {
+            $email = mysqli_real_escape_string($db->mysqli, $this->email);
+            $password = mysqli_real_escape_string($db->mysqli, $this->username);
+
+            $query_user = "SELECT * FROM users WHERE email='$email' LIMIT 1";
+            $query_user_result = $db->mysqli->query($query_user);
+
+            if ($query_user_result->num_rows == 1) {
+                $row = $query_user_result->fetch_assoc();
+
+                $hashed_password = $row["password"];
+                if (password_verify($this->password, $hashed_password)) {
+                    $_SESSION["logged_in"] = "LOGGED_IN";
+
+                    // header("Location: /dashboard.php");
+                    return $_SESSION["logged_in"];
+                    exit;
+                } else {
+                    return "INVALID_CREDENTIALS";
+                }
+            } else {
+                return "INVALID_CREDENTIALS";
             }
         }
     }    
