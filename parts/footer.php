@@ -1,7 +1,7 @@
     <h2>Footer</h2>
 
     <script>
-        console.log("::: Footer.php")
+        console.log("::: MSG: footer.php: Footer initiated")
     </script>
 
     </body>
