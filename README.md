@@ -28,6 +28,8 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Setup dynamic directories
 - [x] Setup folder and file structure
 - [x] Setup database connection
+- [x] Add composer dependency for .env file
+- [x] Add libraries: CSS Foundation ZURB, jQuery and reset CSS
 - [x] Setup "User" class
 - [x] Setup "Form" component
 - [ ] Setup "SuccessStatus" component
