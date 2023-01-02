@@ -4,7 +4,6 @@
         $current_url = $_SERVER["REQUEST_URI"];
 
         if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === "LOGGED_IN") {
-            echo "0";
             if (strpos($current_url, "/views/") !== false) {
                 // ...
             } else {
@@ -12,7 +11,6 @@
             }
         } else {
             if (strpos($current_url, "/views/") !== false && $_SESSION["logged_in"] !== "LOGGED_IN") {
-                echo "3";
                 header("Location: ". $project_directory ."/index.php");
             }
         }
