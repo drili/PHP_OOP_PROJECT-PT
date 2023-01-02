@@ -13,40 +13,71 @@
     if (isset($_SESSION["logged_in"])) {
         echo $_SESSION["logged_in"];
     }
-?> 
+?>
 
-<h6>LOCATION: <?php echo $current_directory; ?> index.php</h6>
+<link rel="stylesheet" type="text/css" href="<?php echo $relative_directory; ?>/__css/pages/index.css">
 
-<section class="section-form-element">
-    <?php
-        $form_elements = [
-            [
-                'label' => 'Email',
-                'type' => 'email',
-                'name' => 'email',
-                'value' => ''
-            ],
-            [
-                'label' => 'Password',
-                'type' => 'password',
-                'name' => 'password',
-                'value' => ''
-            ]
-        ];
+<div class="container-outter">
+    <div class="container-custom">
 
-        $form = createForm("login-form", "", "", $form_elements, "Login");
+        <div class="grid-container">
+            <div class="grid-x">
 
-        echo $form;
-    ?>
+                <div class="cell cell-main small-12 large-6">
+                    <div class="cell-inner">
+                        <section class="mb-40" data-aos="fade-right">
+                            <h3 class="bold-text">Welcome back</h3>
+                            <p class="light-text">Please enter your credentials to login!</p>
+                        </section>
 
-    <div class="status-msg form-status-message__login-form">
+                        <section class="section-form-element" data-aos="fade-right" data-aos-delay="300">
+                            <?php
+                                $form_elements = [
+                                    [
+                                        'label' => 'Email',
+                                        'type' => 'email',
+                                        'name' => 'email',
+                                        'value' => ''
+                                    ],
+                                    [
+                                        'label' => 'Password',
+                                        'type' => 'password',
+                                        'name' => 'password',
+                                        'value' => ''
+                                    ]
+                                ];
 
+                                $form = createForm("login-form", "", "", $form_elements, "Login");
+
+                                echo $form;
+                            ?>
+
+                            <div class="status-msg form-status-message__login-form">
+
+                            </div>
+
+                            <div class="link-redirect">
+                                <p>Don't have an account? <a href="./register.php">Register here</a></p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="cell cell-main large-offset-1 large-5 cell-not-mobile">
+                    <section data-aos="fade-left">
+                        <div class="cell-inner">
+                            <div class="login-intro-image">
+                                <img src="<?php echo $relative_directory; ?>/assets/images/undraw_fingerprint_login_re_t71l.svg" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    
     </div>
-
-    <div class="link-redirect">
-        <p>Don't have an account? <a href="./register.php">Register here</a></p>
-    </div>
-</section>
+</div>
 
 <?php
     // *** Include footer.php

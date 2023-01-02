@@ -1,9 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+:root {
+    --color-primary: #202020;
+    --color-primary-light: #3F3F3F;
+    --color-gray: #707070;
+    --color-light-gray: #F1F1F1;
+
+    --color-yellow: #FFDF6C;
+    --color-purple: #36008D;
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    --font-2xs: 0.625rem;
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.75rem;
+    --font-4xl: 2rem;
+    --font-5xl: 2.25rem;
+    --font-6xl: 2.5rem;
+    --font-7xl: 3rem;
+    --font-8xl: 3.5rem;
+    --font-9xl: 4rem;
+    --font-10xl: 4.5rem;
+    --font-11xl: 5rem;
+    --font-12xl: 6rem;
+
+    --font-2xs-leading: 1.875;
+    --font-xs-leading: 1.875;
+    --font-sm-leading: 1.75;
+    --font-md-leading: 1.75;
+    --font-lg-leading: 1.625;
+    --font-xl-leading: 1.625;
+    --font-2xl-leading: 1.5;
+    --font-3xl-leading: 1.375;
+    --font-4xl-leading: 1.25;
+    --font-5xl-leading: 1.25;
+    --font-6xl-leading: 1.25;
+    --font-7xl-leading: 1.25;
+    --font-8xl-leading: 1.25;
+    --font-9xl-leading: 1.125;
+    --font-10xl-leading: 1.125;
+    --font-11xl-leading: 1.125;
+    --font-12xl-leading: 1.125;
+
+    --font-var: 'IBM Plex Serif', serif;
+    --border-radius: 10px;
+}
+
+/* *** Typography */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background-color: var(--color-white) !important;
+}
+* {
+    color: var(--color-primary) !important;
+    font-family: var(--font-var) !important;
+}
+h1 {
+    font-size: var(--font-9xl) !important;
+    letter-spacing: var(--font-9xl-leading) !important;
+}
+h2 {
+    font-size: var(--font-6xl) !important;
+    letter-spacing: var(--font-6xl-leading) !important;
+}
+h3 {
+    font-size: var(--font-4xl) !important;
+    letter-spacing: var(--font-4xl-leading) !important;
+}
+h4 {
+    font-size: var(--font-3xl) !important;
+    letter-spacing: var(--font-3xl-leading) !important;
+}
+h5 {
+    font-size: var(--font-2xl) !important;
+    letter-spacing: var(--font-2xl-leading) !important;
+}
+h6 {
+    font-size: var(--font-xl) !important;
+    letter-spacing: var(--font-xl-leading) !important;
+}
+p,
+a {
+    font-size: var(--font-lg) !important;
+    letter-spacing: var(--font-lg-leading) !important;
+}
+
+.bold-text {
+    font-weight: bold !important;
+}
+
+.light-text {
+    color: var(--color-gray) !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+@media screen and (max-width: 990px) {
+    h1 {
+        font-size: var(--font-6xl) !important;
+        letter-spacing: var(--font-6xl-leading) !important;
+    }
+    h2 {
+        font-size: var(--font-4xl) !important;
+        letter-spacing: var(--font-4xl-leading) !important;
+    }
+    h3 {
+        font-size: var(--font-3xl) !important;
+        letter-spacing: var(--font-3xl-leading) !important;
+    }
+    h4 {
+        font-size: var(--font-2xl) !important;
+        letter-spacing: var(--font-2xl-leading) !important;
+    }
+    h5 {
+        font-size: var(--font-xl) !important;
+        letter-spacing: var(--font-xl-leading) !important;
+    }
+    h6 {
+        font-size: var(--font-lg) !important;
+        letter-spacing: var(--font-xl-leading) !important;
+    }
+    p,
+    a {
+        font-size: var(--font-md) !important;
+        letter-spacing: var(--font-md-leading) !important;
+    }
+}
+
 .status-msg {
     display: none;
 }
 
-.link-redirect,
-.link-redirect > *,
 .link-redirect * {
-    color: blue;
+    font-size: var(--font-md) !important;
+}
+
+.link-redirect a,
+.link-redirect > a,
+.link-redirect a,
+a {
+    color: var(--color-purple) !important;
+    /* font-style: italic; */
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input {
+    border-radius: var(--border-radius) !important;
+    margin-bottom: 20px !important;
+}
+input[type="submit"] {
+    background: var(--color-yellow);
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+label {
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+.form-element {
+    border: 1px solid #eee;
+    border-radius: var(--border-radius) !important;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+}
+.form-element input[type="submit"] {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 990px) {
+    .form-element {
+        padding: 20px 15px;
+        margin-bottom: 30px;
+    }
+}
+
+.container-outter,
+.container-custom {
+    height: 100%;
+}
+
+@media screen and (max-width: 990px) {
+    .cell-not-mobile {
+        display: none;
+    }
+}
+
+[data-aos] {
+    transition-timing-function: cubic-bezier(.95,.34,.25,1.01) !important;
+    transition-duration: 0.75s !important;
 }

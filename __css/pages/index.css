@@ -1,0 +1,29 @@
+.cell-main,
+.cell-inner {
+    height: 100vh !important;
+}
+
+.cell-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-intro-image {
+    position: relative;
+    z-index: 1;
+}
+.login-intro-image::before {
+    content: "";
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    background-color: var(--color-purple);
+    z-index: -1;
+    top: 40px;
+    left: 40px;
+}
+.login-intro-image img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}

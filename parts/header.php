@@ -32,18 +32,19 @@
         <!-- *** Zurb Foundation -->
         <!-- Compressed CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
-        <!-- Compressed JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+        <!-- *** AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
 
+    <?php if(isset($_SESSION["logged_in"])) : ?>
         <section class="nav-section">
             <nav class="nav-main">
-                <?php if(isset($_SESSION["logged_in"])) : ?>
-                    <a href="<?php echo isset($relative_directory) ? $relative_directory : "." ?>/logout.php">Logout</a>
-                <?php else : ?>
-                    <a href="<?php echo isset($relative_directory) ? $relative_directory : "." ?>/index.php">Login</a>
-                <?php endif; ?>
+                <a href="<?php echo isset($relative_directory) ? $relative_directory : "." ?>/logout.php">Logout</a>
             </nav>
+
             <hr>
         </section>
+    <?php endif; ?>

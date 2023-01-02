@@ -9,9 +9,7 @@
 
     // *** Components
     require $current_directory . "/components/Form.php";
-?> 
-
-<h6>LOCATION: <?php echo $current_directory; ?> register.php</h6>
+?>
 
 <section class="section-form-element">
     <?php
