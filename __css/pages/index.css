@@ -22,8 +22,22 @@
     z-index: -1;
     top: 40px;
     left: 40px;
+    transform: translateX(0);
+    animation: introImageBackground 30s ease-in 1.5s infinite normal forwards;
 }
 .login-intro-image img {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+@keyframes introImageBackground {
+    0% {
+        transform: translateX(0);
+    }
+    70% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
