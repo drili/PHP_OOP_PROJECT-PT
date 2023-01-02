@@ -31,3 +31,14 @@
         <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
     </head>
     <body>
+
+        <section class="nav-section">
+            <nav class="nav-main">
+                <?php if(isset($_SESSION["logged_in"])) : ?>
+                    <a href="<?php echo isset($relative_directory) ? $relative_directory : "." ?>/logout.php">Logout</a>
+                <?php else : ?>
+                    <a href="<?php echo isset($relative_directory) ? $relative_directory : "." ?>/index.php">Login</a>
+                <?php endif; ?>
+            </nav>
+            <hr>
+        </section>

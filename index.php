@@ -10,8 +10,9 @@
     // *** Components
     require $current_directory . "/components/Form.php";
 
-    unset($_SESSION["logged_in"]);
-    echo $_SESSION["logged_in"];
+    if (isset($_SESSION["logged_in"])) {
+        echo $_SESSION["logged_in"];
+    }
 ?> 
 
 <h6>LOCATION: <?php echo $current_directory; ?> index.php</h6>

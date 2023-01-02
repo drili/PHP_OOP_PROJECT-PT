@@ -67,6 +67,8 @@
                 $hashed_password = $row["password"];
                 if (password_verify($this->password, $hashed_password)) {
                     $_SESSION["logged_in"] = "LOGGED_IN";
+                    $_SESSION["username"] = $row["username"];
+                    $_SESSION["email"] = $row["email"];
 
                     // header("Location: /dashboard.php");
                     return $_SESSION["logged_in"];
