@@ -69,6 +69,7 @@
                     $_SESSION["logged_in"] = "LOGGED_IN";
                     $_SESSION["username"] = $row["username"];
                     $_SESSION["email"] = $row["email"];
+                    $_SESSION["user_activated"] = $row["user_activated"];
 
                     // header("Location: /dashboard.php");
                     return $_SESSION["logged_in"];

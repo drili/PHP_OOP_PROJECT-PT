@@ -35,7 +35,7 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Setup "SuccessStatus" (js component) component
 - [x] Create a "Login" form and use PHP to login the user using "email" and "password" as parameters.
     - Make sure the user gets redirected to the dashboard view
-- [ ] Add authentication controller, if user is not logged in, they must be redirected back to the login page.
+- [x] Add authentication controller, if user is not logged in, they must be redirected back to the login page.
     - Also check if the user is activated
 - [ ] Start CSS styling (global- and component-based styling)
 - [ ] Add SQL database to repo

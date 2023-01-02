@@ -1,6 +1,7 @@
 <?php
     // *** Pre-requisites
     $root_directory = $_SERVER['DOCUMENT_ROOT'] . "/PROJECTS_2023\PHP_OOP_PROJECT_1";
+    $project_directory = "/PROJECTS_2023\PHP_OOP_PROJECT_1";
 
     // * Global functions
     require $root_directory . "/functions/globalFunctions.php";

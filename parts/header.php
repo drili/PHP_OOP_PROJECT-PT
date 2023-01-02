@@ -7,6 +7,11 @@
 
     // *** Include header_pre.php
     require $current_directory_header . './header_pre.php';
+
+    // *** AuthController
+    require $relative_directory . "/lib/AuthController.php";
+    AuthControllerLogin($project_directory);
+    AuthControllerActivated($project_directory);
 ?>
 
 <!DOCTYPE html>
