@@ -10,9 +10,12 @@
 
                     <div class="cell small-12 large-10 large-offset-2">
                         <nav class="nav-main">
-                            <div class="nav-searchbar">
-                                <i class="gg-search"></i>
-                                <input class="mb-0" type="search" placeholder="Search for stuff...">
+                            <div class="nav-searchbar-outter">
+                                <div class="nav-searchbar">
+                                    <i class="gg-search"></i>
+                                    <input class="mb-0" type="search" placeholder="Search for stuff...">
+                                </div>
+                                <button class="btn btn-gray">Search</button>
                             </div>
 
                             <ul class="nav-ul">

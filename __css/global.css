@@ -61,7 +61,7 @@
 html,
 body {
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body {
     background-color: var(--color-white) !important;
@@ -164,12 +164,16 @@ a {
     font-size: var(--font-xs) !important;
     letter-spacing: var(--font-2xs-leading) !important;
     color: var(--color-black) !important;
+    cursor: pointer;
 }
 .btn i {
     margin-right: 15px;
 }
 .btn.btn-main {
     background-color: var(--color-yellow) !important;
+}
+.btn.btn-gray {
+    background-color: var(--color-light-gray);
 }
 
 .status-msg {

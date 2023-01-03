@@ -35,6 +35,10 @@
     /* font-weight: 700; */
 }
 
+.sidebar-section-menu {
+    position: relative;
+}
+
 .sidebar-section .sidebar-section-menu ul {
     margin: 0 !important;
 }
