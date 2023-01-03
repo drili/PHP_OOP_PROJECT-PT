@@ -9,10 +9,6 @@
 
     // *** Components
     require $current_directory . "/components/Form.php";
-
-    if (isset($_SESSION["logged_in"])) {
-        echo $_SESSION["logged_in"];
-    }
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo $relative_directory; ?>/__css/pages/index.css">

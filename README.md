@@ -37,5 +37,9 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
     - Make sure the user gets redirected to the dashboard view
 - [x] Add authentication controller, if user is not logged in, they must be redirected back to the login page.
     - Also check if the user is activated
-- [ ] Start CSS styling (global- and component-based styling)
-- [ ] Add SQL database to repo
+- [x] Start CSS styling (global- and component-based styling)
+- [x] Add SQL database to repo
+- [ ] Profile page
+    - User can update their profile, insert profile image
+    - Stylize the profile page
+- [ ] Stylize the not-activated.php page

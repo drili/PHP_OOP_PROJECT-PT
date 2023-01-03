@@ -11,6 +11,10 @@
 
     --color-white: #FFFFFF;
     --color-black: #000000;
+    --color-red: #c0392b;
+    --color-red-light: #ffc0ba;
+    --color-green: #2ecc71;
+    --color-green-light: #c6ffde;
 
     --font-2xs: 0.625rem;
     --font-xs: 0.75rem;
@@ -159,7 +163,7 @@ a {
 a {
     color: var(--color-purple) !important;
     /* font-style: italic; */
-    text-decoration: underline;
+    text-decoration: underline !important;
     cursor: pointer;
     font-weight: bold;
 }
@@ -212,4 +216,25 @@ label {
 [data-aos] {
     transition-timing-function: cubic-bezier(.95,.34,.25,1.01) !important;
     transition-duration: 0.75s !important;
+}
+
+.status-error {
+    color: var(--color-red) !important;
+    background: var(--color-red-light) !important;
+    border-radius: var(--border-radius) !important;
+    padding: 5px 20px;
+    font-size: var(--font-sm) !important;
+    text-align: center;
+}
+
+.status-success {
+    color: var(--color-green) !important;
+    background: var(--color-green-light) !important;
+    border-radius: var(--border-radius) !important;
+    padding: 5px 20px;
+    font-size: var(--font-sm) !important;
+    text-align: center;
+}
+.status-success * {
+    font-size: var(--font-sm) !important;
 }
