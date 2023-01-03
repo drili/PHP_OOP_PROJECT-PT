@@ -26,7 +26,7 @@
                             <p class="light-text">Please fill out the form to create your new account!</p>
                         </section>
                         
-                        <section class="section-form-element">
+                        <section class="section-form-element" data-aos="fade-right" data-aos-delay="300">
                             <?php
                                 $form_elements = [
                                     [

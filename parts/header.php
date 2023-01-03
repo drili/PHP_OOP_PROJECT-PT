@@ -12,6 +12,12 @@
     require $relative_directory . "/lib/AuthController.php";
     AuthControllerLogin($project_directory);
     AuthControllerActivated($project_directory);
+
+    // *** Page structure components
+    require $relative_directory . "/components/Topbar.php";
+    require $relative_directory . "/components/Sidebar.php";
+    $topbarComponent = topbarComponent($relative_directory);
+    $sidebarComponent = sidebarComponent($relative_directory);
 ?>
 
 <!DOCTYPE html>
@@ -36,15 +42,12 @@
 
         <!-- *** AOS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- *** CSS.GG -->
+        <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
     </head>
     <body>
 
     <?php if(isset($_SESSION["logged_in"])) : ?>
-        <section class="nav-section">
-            <nav class="nav-main">
-                <a href="<?php echo isset($relative_directory) ? $relative_directory : "." ?>/logout.php">Logout</a>
-            </nav>
-
-            <hr>
-        </section>
+        <?php echo $topbarComponent; ?>
     <?php endif; ?>

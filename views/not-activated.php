@@ -6,7 +6,7 @@
     // *** Include header.php & files
     require_once $current_directory . '/../parts/header.php';
 ?> 
-
+    
     <h1>Your user has not been activated!</h1>
 
 <?php

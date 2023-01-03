@@ -3,10 +3,11 @@
 :root {
     --color-primary: #202020;
     --color-primary-light: #3F3F3F;
-    --color-gray: #707070;
+    --color-gray: #a3a3a3;
     --color-light-gray: #F1F1F1;
 
     --color-yellow: #FFDF6C;
+    --color-yellow-light: #fdefb9;
     --color-purple: #36008D;
 
     --color-white: #FFFFFF;
@@ -16,7 +17,7 @@
     --color-green: #2ecc71;
     --color-green-light: #c6ffde;
 
-    --font-2xs: 0.625rem;
+    --font-2xs: 0.525rem;
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
     --font-md: 1rem;
@@ -34,7 +35,7 @@
     --font-11xl: 5rem;
     --font-12xl: 6rem;
 
-    --font-2xs-leading: 1.875;
+    --font-2xs-leading: 1.275;
     --font-xs-leading: 1.875;
     --font-sm-leading: 1.75;
     --font-md-leading: 1.75;
@@ -68,6 +69,7 @@ body {
 * {
     color: var(--color-primary) !important;
     font-family: var(--font-var) !important;
+    /* word-wrap: anywhere; */
 }
 h1 {
     font-size: var(--font-9xl) !important;
@@ -95,8 +97,8 @@ h6 {
 }
 p,
 a {
-    font-size: var(--font-lg) !important;
-    letter-spacing: var(--font-lg-leading) !important;
+    font-size: var(--font-md) !important;
+    letter-spacing: var(--font-md-leading) !important;
 }
 
 .bold-text {
@@ -107,6 +109,9 @@ a {
     color: var(--color-gray) !important;
 }
 
+.mb-0 {
+    margin-bottom: 0 !important;
+}
 .mb-10 {
     margin-bottom: 10px !important;
 }
@@ -144,9 +149,27 @@ a {
     }
     p,
     a {
-        font-size: var(--font-md) !important;
-        letter-spacing: var(--font-md-leading) !important;
+        font-size: var(--font-sm) !important;
+        letter-spacing: var(--font-sm-leading) !important;
     }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: var(--border-radius) !important;
+    padding: 10px 20px;
+    text-decoration: none !important;
+    font-size: var(--font-xs) !important;
+    letter-spacing: var(--font-2xs-leading) !important;
+    color: var(--color-black) !important;
+}
+.btn i {
+    margin-right: 15px;
+}
+.btn.btn-main {
+    background-color: var(--color-yellow) !important;
 }
 
 .status-msg {
@@ -171,6 +194,12 @@ a {
 input {
     border-radius: var(--border-radius) !important;
     margin-bottom: 20px !important;
+    padding: 15px 20px !important;
+    border: 2px solid var(--color-light-gray) !important;
+    box-shadow: none !important;
+}
+input:focus {
+    border: 2px solid var(--color-purple) !important;
 }
 input[type="submit"] {
     background: var(--color-yellow);
@@ -211,6 +240,16 @@ label {
     .cell-not-mobile {
         display: none;
     }
+}
+
+.page-wrapper,
+.grid-container-fluid-custom,
+.grid-x-main {
+    height: 100%;
+}
+
+.page-wrapper .cell-main {
+    padding: 30px;
 }
 
 [data-aos] {

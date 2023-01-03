@@ -30,7 +30,7 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Setup database connection
 - [x] Add composer dependency for .env file
 - [x] Add libraries: CSS Foundation ZURB, jQuery and reset CSS
-- [x] Setup "User" class
+- [x] Setup "User" class & "users" table in database
 - [x] Setup "Form" component
 - [x] Setup "SuccessStatus" (js component) component
 - [x] Create a "Login" form and use PHP to login the user using "email" and "password" as parameters.
@@ -39,7 +39,12 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
     - Also check if the user is activated
 - [x] Start CSS styling (global- and component-based styling)
 - [x] Add SQL database to repo
+- [x] Setup basic navigation (sidebar for main links, topnav for misc)
 - [ ] Profile page
     - User can update their profile, insert profile image
     - Stylize the profile page
 - [ ] Stylize the not-activated.php page
+- [ ] Setup "user_roles" table in database
+- [ ] Admin view
+    - Admin can activate un-activated users (also de-activate)
+    - Admin can delete and modify users
