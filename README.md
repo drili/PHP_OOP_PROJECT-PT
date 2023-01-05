@@ -40,6 +40,9 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Start CSS styling (global- and component-based styling)
 - [x] Add SQL database to repo
 - [x] Setup basic navigation (sidebar for main links, topnav for misc)
+- [x] Setup darkmode functionality
+    - Use database instead of cookies
+    - Database updates when darkmode enabled/disabled
 - [ ] Profile page
     - User can update their profile, insert profile image
     - Stylize the profile page

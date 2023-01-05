@@ -37,6 +37,19 @@
                         </ul>
                     </div>
 
+                    <div class="sidebar-section-bottom">
+                        <div class="darkmode-section">
+                            <div>
+                                <input type="checkbox" class="checkbox" id="checkbox" <?php echo ($_SESSION["darkmode"] === "darkmode") ? "" : "checked"; ?>>
+                                <label for="checkbox" class="label">
+                                    <i class="gg-moon"></i>
+                                    <i class="gg-sun"></i>
+                                    <div class='ball'></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </setion>

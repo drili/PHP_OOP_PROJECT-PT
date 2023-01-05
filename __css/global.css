@@ -55,6 +55,11 @@
 
     --font-var: 'IBM Plex Serif', serif;
     --border-radius: 10px;
+    --cubic-bezier: cubic-bezier(.95,.34,.25,1.01);
+}
+
+body.darkmode {
+    --color-yellow: red;
 }
 
 /* *** Typography */
@@ -62,6 +67,7 @@ html,
 body {
     height: 100%;
     overflow-x: hidden;
+    transition: all 0.5s var(--cubic-bezier);
 }
 body {
     background-color: var(--color-white) !important;

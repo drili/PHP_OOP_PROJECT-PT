@@ -63,13 +63,29 @@
 
             if ($query_user_result->num_rows == 1) {
                 $row = $query_user_result->fetch_assoc();
-
+                
                 $hashed_password = $row["password"];
                 if (password_verify($this->password, $hashed_password)) {
                     $_SESSION["logged_in"] = "LOGGED_IN";
                     $_SESSION["username"] = $row["username"];
                     $_SESSION["email"] = $row["email"];
                     $_SESSION["user_activated"] = $row["user_activated"];
+
+                    $query_darkmode = "SELECT * FROM darkmode WHERE user_email='".$row["email"]."'";
+                    $query_darkmode_result = $db->mysqli->query($query_darkmode);
+
+                    if ($query_darkmode_result->num_rows == 1) {
+                        $row_darkmode = $query_darkmode_result->fetch_assoc();
+
+                        $_SESSION["darkmode"] = $row_darkmode["darkmode_status"];
+                    } else {
+                        $_SESSION["darkmode"] = "lightmode";
+                    }
+
+                    $stmt_darkmode = $db->mysqli->prepare("SELECT 1 FROM darkmode WHERE user_email=?");
+                    $stmt_darkmode->bind_param("s", $_SESSION["email"]);
+                    $stmt_darkmode->execute();
+                    $stmt_darkmode->store_result();
 
                     // header("Location: /dashboard.php");
                     return $_SESSION["logged_in"];

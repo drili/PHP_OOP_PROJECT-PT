@@ -28,6 +28,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Index</title>
 
+        <!-- *** JS Pre -->
+        <script src="<?php echo $relative_directory; ?>/__js/global_pre.js"></script>
+
         <!-- *** External scripts -->
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
@@ -46,8 +49,9 @@
         <!-- *** CSS.GG -->
         <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
     </head>
-    <body>
+        <body class="<?php if(isset($_SESSION["darkmode"])) : echo ($_SESSION["darkmode"] === "darkmode") ? "darkmode" : ""; endif;?>">
 
-    <?php if(isset($_SESSION["logged_in"])) : ?>
-        <?php echo $topbarComponent; ?>
-    <?php endif; ?>
+
+        <?php if(isset($_SESSION["logged_in"])) : ?>
+            <?php echo $topbarComponent; ?>
+        <?php endif; ?>
