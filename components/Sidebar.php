@@ -10,7 +10,7 @@
 
                     <div class="cell small-12 sidebar-section-top">
                         <img src="<?php echo $relative_directory; ?>/assets/images/none.svg" alt="">
-                        <h6><?php echo $_SESSION["username"]; ?></h6>
+                        <p><?php echo $_SESSION["username"]; ?></p>
                     </div>
 
                     <div class="cell small-12 sidebar-section-menu">

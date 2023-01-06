@@ -9,3 +9,5 @@
 # Inspiration
     - https://dribbble.com/shots/20267926-Core-Dashboard-Builder-Customer-Components
     - https://dribbble.com/shots/16878702-Sidebar-Navigation
+    - https://dribbble.com/shots/18530529-Coderspace-Candidate-Profile-Dashboard
+    - https://dribbble.com/shots/16586392-Profile-settings-page-Untitled-UI
