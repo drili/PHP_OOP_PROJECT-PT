@@ -59,7 +59,21 @@
 }
 
 body.darkmode {
-    --color-yellow: red;
+    --color-primary: #a3a3a3;
+    --color-primary-light: #F1F1F1;
+    --color-gray: #202020;
+    --color-light-gray: #3F3F3F;
+
+    --color-yellow: #ffc0ba;
+    --color-yellow-light: #FFDF6C;
+    --color-purple: #c6ffde;
+
+    --color-white: #000000;
+    --color-black: #FFFFFF;
+    --color-red: #2ecc71;
+    --color-red-light: #c0392b;
+    --color-green: #36008D;
+    --color-green-light: #fdefb9;
 }
 
 /* *** Typography */
