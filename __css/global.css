@@ -376,3 +376,32 @@ label {
 .form-flex .form-div-100 {
     width: 100%;
 }
+
+.custom-loader {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.custom-loader i {
+    transform: scale(var(--ggs,2)) !important;
+}
+
+.jq-toast-wrap {
+    width: auto !important;
+}
+
+.jq-toast-wrap * {
+    color: var(--color-white) !important;
+}
+
+.jq-toast-single {
+    display: flex;
+    flex-direction: column !important;
+    padding: 20px !important;
+}
+
+.jq-toast-wrap h2 {
+    font-size: var(--font-3xl) !important;
+}

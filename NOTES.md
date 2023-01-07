@@ -7,6 +7,8 @@
         1. https://github.com/astrit/css.gg#get-started
     - CSS box-shadows
         1. https://getcssscan.com/css-box-shadow-examples
+    - jQuery Toast
+        1. https://kamranahmed.info/toast
 
 # Inspiration
     - https://dribbble.com/shots/20267926-Core-Dashboard-Builder-Customer-Components

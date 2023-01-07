@@ -43,14 +43,9 @@
                                                         </div>
 
                                                         <div class="user-profile">
-                                                            <div class="image-section">
-                                                                <span>
-                                                                    <img src="<?php echo $relative_directory; ?>/assets/images/none.svg" alt="">
-                                                                </span>
-                                                                <span>
-                                                                    <h6 class="mb-0"><?php echo $_SESSION["username"]; ?></h6>
-                                                                    <p>KYNETIC · <?php echo $_SESSION["user_title"]; ?></p>
-                                                                </span>
+                                                            <!-- AJAX FETCH "image-section" -->
+                                                            <div class="custom-loader">
+                                                                <i class="gg-spinner"></i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -74,17 +69,17 @@
                                                                 <div class="form-div form-div-60">
                                                                     <span>
                                                                         <label for="username">Username</label>
-                                                                        <input type="text" name="username" value="<?php echo $_SESSION["username"]; ?>">
+                                                                        <input required type="text" name="username" value="<?php echo $_SESSION["username"]; ?>">
                                                                     </span>
 
                                                                     <span>
                                                                         <label for="email">Email</label>
-                                                                        <input type="email" name="email" value="<?php echo $_SESSION["email"]; ?>">
+                                                                        <input required type="email" name="email" value="<?php echo $_SESSION["email"]; ?>">
                                                                     </span>
 
                                                                     <span>
                                                                         <label for="user_title">User Title</label>
-                                                                        <input type="text" name="user_title" value="<?php echo $_SESSION["user_title"]; ?>">
+                                                                        <input required type="text" name="user_title" value="<?php echo $_SESSION["user_title"]; ?>">
                                                                     </span>
 
                                                                     <span>
@@ -93,7 +88,7 @@
 
                                                                     <span>
                                                                         <label for="password">New Password</label>
-                                                                        <input type="password" name="password" value="">
+                                                                        <input required type="password" name="password" value="<?php echo $_SESSION["password"]; ?>">
                                                                     </span>
 
                                                                     <span>
@@ -144,6 +139,8 @@
                     <p>Your profile page.</p>
         
                     <p>User activated: <?php echo $_SESSION["user_activated"]; ?></p>
+
+                    <p>User ID: <?php echo $_SESSION["user_id"]; ?></p>
                 </div>
 
             </div>
