@@ -4,7 +4,7 @@
     --color-primary: #202020;
     --color-primary-light: #3F3F3F;
     --color-gray: #a3a3a3;
-    --color-light-gray: #F1F1F1;
+    --color-light-gray: #f8fafb;
 
     --color-yellow: #FFDF6C;
     --color-yellow-light: #fdefb9;
@@ -56,6 +56,9 @@
     --font-var: 'IBM Plex Serif', serif;
     --border-radius: 10px;
     --cubic-bezier: cubic-bezier(.95,.34,.25,1.01);
+    --box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    --section-mb: 60px;
+    --flex-gap: 30px;
 }
 
 body.darkmode {
@@ -84,7 +87,8 @@ body {
     transition: all 0.5s var(--cubic-bezier);
 }
 body {
-    background-color: var(--color-white) !important;
+    /* background-color: var(--color-white) !important; */
+    background-color: var(--color-light-gray) !important;
 }
 * {
     color: var(--color-primary) !important;
@@ -93,32 +97,48 @@ body {
 }
 h1 {
     font-size: var(--font-9xl) !important;
-    letter-spacing: var(--font-9xl-leading) !important;
+    line-height: var(--font-9xl-leading) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.25rem !important;
 }
 h2 {
     font-size: var(--font-6xl) !important;
-    letter-spacing: var(--font-6xl-leading) !important;
+    line-height: var(--font-6xl-leading) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.25rem !important;
 }
 h3 {
     font-size: var(--font-4xl) !important;
-    letter-spacing: var(--font-4xl-leading) !important;
+    line-height: var(--font-4xl-leading) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.25rem !important;
 }
 h4 {
     font-size: var(--font-3xl) !important;
-    letter-spacing: var(--font-3xl-leading) !important;
+    line-height: var(--font-3xl-leading) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.25rem !important;
 }
 h5 {
     font-size: var(--font-2xl) !important;
-    letter-spacing: var(--font-2xl-leading) !important;
+    line-height: var(--font-2xl-leading) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.25rem !important;
 }
 h6 {
     font-size: var(--font-xl) !important;
-    letter-spacing: var(--font-xl-leading) !important;
+    line-height: var(--font-xl-leading) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.25rem !important;
 }
 p,
 a {
     font-size: var(--font-md) !important;
-    letter-spacing: var(--font-md-leading) !important;
+    line-height: var(--font-md-leading) !important;
+}
+
+hr {
+    border-bottom: 1px solid var(--color-light-gray) !important;
 }
 
 .bold-text {
@@ -142,35 +162,35 @@ a {
     margin-bottom: 40px !important;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
     h1 {
         font-size: var(--font-6xl) !important;
-        letter-spacing: var(--font-6xl-leading) !important;
+        line-height: var(--font-6xl-leading) !important;
     }
     h2 {
         font-size: var(--font-4xl) !important;
-        letter-spacing: var(--font-4xl-leading) !important;
+        line-height: var(--font-4xl-leading) !important;
     }
     h3 {
         font-size: var(--font-3xl) !important;
-        letter-spacing: var(--font-3xl-leading) !important;
+        line-height: var(--font-3xl-leading) !important;
     }
     h4 {
         font-size: var(--font-2xl) !important;
-        letter-spacing: var(--font-2xl-leading) !important;
+        line-height: var(--font-2xl-leading) !important;
     }
     h5 {
         font-size: var(--font-xl) !important;
-        letter-spacing: var(--font-xl-leading) !important;
+        line-height: var(--font-xl-leading) !important;
     }
     h6 {
         font-size: var(--font-lg) !important;
-        letter-spacing: var(--font-xl-leading) !important;
+        line-height: var(--font-xl-leading) !important;
     }
     p,
     a {
         font-size: var(--font-sm) !important;
-        letter-spacing: var(--font-sm-leading) !important;
+        line-height: var(--font-sm-leading) !important;
     }
 }
 
@@ -182,7 +202,7 @@ a {
     padding: 10px 20px;
     text-decoration: none !important;
     font-size: var(--font-xs) !important;
-    letter-spacing: var(--font-2xs-leading) !important;
+    line-height: var(--font-2xs-leading) !important;
     color: var(--color-black) !important;
     cursor: pointer;
 }
@@ -192,8 +212,23 @@ a {
 .btn.btn-main {
     background-color: var(--color-yellow) !important;
 }
+.btn.btn-white {
+    background-color: var(--color-white);
+}
 .btn.btn-gray {
+    background-color: var(--color-gray);
+    color: var(--color-white) !important;
+}
+.btn.btn-light-gray {
     background-color: var(--color-light-gray);
+}
+
+.box-section {
+    background: var(--color-white);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
 }
 
 .status-msg {
@@ -221,6 +256,7 @@ input {
     padding: 15px 20px !important;
     border: 2px solid var(--color-light-gray) !important;
     box-shadow: none !important;
+    font-size: var(--font-sm) !important;
 }
 input:focus {
     border: 2px solid var(--color-purple) !important;
@@ -248,7 +284,7 @@ label {
     text-align: center;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
     .form-element {
         padding: 20px 15px;
         margin-bottom: 30px;
@@ -260,7 +296,7 @@ label {
     height: 100%;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
     .cell-not-mobile {
         display: none;
     }
@@ -274,6 +310,21 @@ label {
 
 .page-wrapper .cell-main {
     padding: 30px;
+}
+
+.page-wrapper .cell-main section {
+    margin-bottom: var(--section-mb) !important;
+}
+
+.page-wrapper .cell-main .heading-section * {
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .page-wrapper .cell-main .cell-padding-right {
+        padding-right: 30px;
+    }
 }
 
 [data-aos] {
@@ -300,4 +351,28 @@ label {
 }
 .status-success * {
     font-size: var(--font-sm) !important;
+}
+
+.form-flex {
+    display: flex;
+    gap: 40px;
+}
+
+.form-flex .form-div-25 {
+    width: 25%;
+}
+.form-flex .form-div-40 {
+    width: 40%;
+}
+.form-flex .form-div-50 {
+    width: 50%;
+}
+.form-flex .form-div-60 {
+    width: 60%;
+}
+.form-flex .form-div-75 {
+    width: 75%;
+}
+.form-flex .form-div-100 {
+    width: 100%;
 }

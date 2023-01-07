@@ -15,7 +15,7 @@
                                     <i class="gg-search"></i>
                                     <input class="mb-0" type="search" placeholder="Search for stuff...">
                                 </div>
-                                <button class="btn btn-gray">Search</button>
+                                <button class="btn btn-white">Search</button>
                             </div>
 
                             <ul class="nav-ul">

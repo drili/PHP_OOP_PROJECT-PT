@@ -9,8 +9,8 @@
                 <div class="grid-x">
 
                     <div class="cell small-12 sidebar-section-top">
-                        <img src="<?php echo $relative_directory; ?>/assets/images/none.svg" alt="">
-                        <p><?php echo $_SESSION["username"]; ?></p>
+                        <img src="<?php echo $relative_directory; ?>/assets/images/components.svg" alt="">
+                        <h6><b>Planning Tool</b></h6>
                     </div>
 
                     <div class="cell small-12 sidebar-section-menu">

@@ -12,7 +12,7 @@
     margin: 0 auto;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
     .sidebar-section .sidebar-section-top {
         transform: translateY(-80px);
     }
@@ -21,6 +21,8 @@
 .sidebar-section .sidebar-section-top img {
     max-width: 100px;
     max-height: 100px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -28,6 +30,21 @@
     border-radius: 100%;
     outline: 8px solid white;
     border: 1px solid #000;
+    transform: rotate(0deg);
+    -webkit-animation: logoAnimation 1s ease-in 0.5s 1 normal forwards;
+    -moz-animation: logoAnimation 1s ease-in 0.5s 1 normal forwards;
+    -o-animation: logoAnimation 1s ease-in 0.5s 1 normal forwards;
+    animation: logoAnimation 1s ease-in 0.5s 1 normal forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
 }
 
 .sidebar-section .sidebar-section-top * {
@@ -80,6 +97,9 @@
 .sidebar-section .darkmode-section {
     position: fixed;
     bottom: 20px;
+}
+.sidebar-section .darkmode-section label {
+    box-shadow: var(--box-shadow);
 }
 
 .sidebar-section .checkbox {

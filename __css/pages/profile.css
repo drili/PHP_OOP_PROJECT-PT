@@ -1,0 +1,42 @@
+.user-profile .image-section {
+    display: flex;
+    gap: var(--flex-gap);
+}
+
+.user-profile .image-section img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.form-user-profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-edit-image {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-edit-image .image-edit-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    background: var(--color-light-gray);
+    padding: 5px 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.profile-edit-image .image-edit-label i {
+    transform: rotate(-45deg) scale(0.75) !important;
+}
+
+.image-section img {
+    border-radius: 100%;
+}

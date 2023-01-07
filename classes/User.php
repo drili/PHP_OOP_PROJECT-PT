@@ -70,6 +70,7 @@
                     $_SESSION["username"] = $row["username"];
                     $_SESSION["email"] = $row["email"];
                     $_SESSION["user_activated"] = $row["user_activated"];
+                    $_SESSION["user_title"] = $row["user_title"];
 
                     $query_darkmode = "SELECT * FROM darkmode WHERE user_email='".$row["email"]."'";
                     $query_darkmode_result = $db->mysqli->query($query_darkmode);

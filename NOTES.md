@@ -5,6 +5,8 @@
         1. https://undraw.co/illustrations
     - css.gg
         1. https://github.com/astrit/css.gg#get-started
+    - CSS box-shadows
+        1. https://getcssscan.com/css-box-shadow-examples
 
 # Inspiration
     - https://dribbble.com/shots/20267926-Core-Dashboard-Builder-Customer-Components
