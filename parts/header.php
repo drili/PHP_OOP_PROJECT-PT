@@ -56,6 +56,6 @@
         <body class="<?php if(isset($_SESSION["darkmode"])) : echo ($_SESSION["darkmode"] === "darkmode") ? "darkmode" : ""; endif;?>">
 
 
-        <?php if(isset($_SESSION["logged_in"])) : ?>
+        <?php if(isset($_SESSION["logged_in"]) && $_SESSION["user_activated"] == 1) : ?>
             <?php echo $topbarComponent; ?>
         <?php endif; ?>

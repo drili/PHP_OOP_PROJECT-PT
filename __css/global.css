@@ -319,6 +319,11 @@ label {
     height: 100%;
 }
 
+.page-wrapper .grid-x-vert-center {
+    flex-direction: column;
+    justify-content: center;
+}
+
 .page-wrapper .cell-main {
     padding: 30px;
 }
