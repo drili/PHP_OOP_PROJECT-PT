@@ -18,14 +18,15 @@ $(document).ready(function() {
             for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
                 
                 var file = e.originalEvent.srcElement.files[i];
-                
                 var img = document.createElement("img");
                 var reader = new FileReader();
                 reader.onloadend = function() {
                      img.src = reader.result;
                 }
                 reader.readAsDataURL(file);
+
                 $(".profile-edit-image .image-section").html(img);
+                $(".updated-image-name").text(file.name);
             }
         });
     
@@ -40,21 +41,26 @@ $(document).ready(function() {
     function ajaxUpdateProfile() {
         $(".form-user-profile").submit(function(event) {
             event.preventDefault();
-
+            
             var formData = $(this).serialize();
+            const fileInput = document.querySelector('input[type="file"]');
+            const file = fileInput.files[0];
 
             $.ajax({
                 type: "POST",
                 url: "../AJAX/profile/AJAX_update_user.php",
                 data: formData,
                 dataType: "json",
-
                 success: function(response) {
                     // console.log(response.update_user_res);
 
                     if (response.update_user_res === "USER_UPDATE_SUCCESS") {
                         toastMessageSuccess("Success!", "Profile has been updated successfully.");
                         var loaderComponent = Loader();
+
+                        if(file !== undefined) {
+                            ajaxUpdateProfileImage(file)
+                        }
 
                         $(".user-profile").html(loaderComponent);
                         setTimeout(() => {
@@ -71,6 +77,25 @@ $(document).ready(function() {
                     console.log(error);
                 }
             })
+        })
+    }
+
+    function ajaxUpdateProfileImage(file) {
+        console.log({file});
+        
+        data = new FormData();
+        data.append("file", file)
+        
+        $.ajax({
+            type: "POST",
+            url: "../AJAX/profile/AJAX_update_user_image.php",
+            data: data,
+            contentType: false,
+            processData: false,
+
+            success: function(response) {
+                console.log(response);
+            }
         })
     }
 

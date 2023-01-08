@@ -6,7 +6,7 @@ function toastMessageSuccess(heading, text) {
         stack: false,
         bgColor: '#2ecc71',
         textColor: '#fff',
-        hideAfter: 5000
+        hideAfter: 3500
     })
 }
 
@@ -18,6 +18,6 @@ function toastMessageError(heading, text) {
         stack: false,
         bgColor: '#c0392b',
         textColor: '#fff',
-        hideAfter: 5000
+        hideAfter: 3500
     })
 }

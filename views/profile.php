@@ -101,12 +101,17 @@
                                                                         <label for="profile_image">Profile Image</label>
                                                                         <div class="profile-edit-image">
                                                                             <span class="image-section">
-                                                                                <img class="profile-image" src="<?php echo $relative_directory; ?>/assets/images/none.svg" alt="">
+                                                                                <img class="profile-image" src="<?php echo $relative_directory; ?>/assets/images/profile_pictures/<?php echo $_SESSION["profile_image"]; ?>" alt="">
                                                                             </span>
                                                                             <span class="image-edit-label"><i class="gg-pen"></i> Edit</span>
                                                                         </div>
 
                                                                         <input type="file" hidden id="myFileProfile" name="profile_image" accept="image/png, image/jpeg">
+                                                                        <input type="hidden" name="base64_image" id="base64_image" value="">
+                                                                    </span>
+
+                                                                    <span>
+                                                                        <p class="updated-image-name small-p font-light mt-10"></p>
                                                                     </span>
                                                                 </div>
                                                             </form>

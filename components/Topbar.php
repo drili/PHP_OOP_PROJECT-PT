@@ -36,7 +36,7 @@
                                 </li>
                                 <li>
                                     <span class="profile-image">
-                                        <img class="nav-profile-img" src="<?php echo $relative_directory; ?>/assets/images/none.svg" alt="">
+                                        <img class="nav-profile-img" src="<?php echo $relative_directory; ?>/assets/images/profile_pictures/<?php echo $_SESSION["profile_image"]; ?>" alt="">
                                         <i class="gg-chevron-down-o"></i>
                                     </span>
                                     <span class="profile-links">

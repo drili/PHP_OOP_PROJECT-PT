@@ -7,6 +7,7 @@
         public $new_password;
         public $user_title;
         public $user_id;
+        public $profile_image;
 
         public function __construct($data) {
             if (isset($data["username"])) { $this->username = $data["username"]; }
@@ -15,6 +16,7 @@
             if (isset($data["new_password"])) { $this->new_password = $data["new_password"]; }
             if (isset($data["user_title"])) { $this->user_title = $data["user_title"]; }
             if (isset($data["user_id"])) { $this->user_id = $data["user_id"]; }
+            if (isset($data["profile_image"])) { $this->profile_image = $data["profile_image"]; }
         }
 
         public function createUser($db) {
@@ -101,6 +103,24 @@
             }
         }
 
+        public function updateUserImage($db) {
+            $profile_image = mysqli_real_escape_string($db->mysqli, $this->profile_image);
+            $user_id = mysqli_real_escape_string($db->mysqli, $this->user_id);
+
+            if (isset($profile_image)) {
+                $sql_insert_image = "UPDATE users SET profile_image='".$profile_image."' WHERE id='".$user_id."'";
+                $sql_insert_image_res = $db->mysqli->query($sql_insert_image);
+
+                if (mysqli_affected_rows($db->mysqli) > 0) {
+                    $_SESSION["profile_image"] = $profile_image;
+                    return "Query was successful";
+                } else {
+                    $error = mysqli_error($db->mysqli);
+                    return $error;
+                }
+            }
+        }
+
         public function loginUser($db) {
             $email = mysqli_real_escape_string($db->mysqli, $this->email);
             $password = mysqli_real_escape_string($db->mysqli, $this->username);
@@ -120,6 +140,7 @@
                     $_SESSION["user_activated"] = $row["user_activated"];
                     $_SESSION["user_title"] = $row["user_title"];
                     $_SESSION["password"] = $this->password;
+                    $_SESSION["profile_image"] = $row["profile_image"];
 
                     $query_darkmode = "SELECT * FROM darkmode WHERE user_email='".$row["email"]."'";
                     $query_darkmode_result = $db->mysqli->query($query_darkmode);

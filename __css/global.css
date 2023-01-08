@@ -161,6 +161,9 @@ hr {
 .mb-40 {
     margin-bottom: 40px !important;
 }
+.mt-10 {
+    margin-top: 10px !important;
+}
 
 @media screen and (max-width: 1024px) {
     h1 {
@@ -192,6 +195,14 @@ hr {
         font-size: var(--font-sm) !important;
         line-height: var(--font-sm-leading) !important;
     }
+}
+
+p.small-p {
+    font-size: var(--font-xs) !important;
+}
+
+.font-light {
+    color: var(--color-gray) !important;
 }
 
 .btn {

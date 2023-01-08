@@ -43,7 +43,7 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Setup darkmode functionality
     - Use database instead of cookies
     - Database updates when darkmode enabled/disabled
-- [ ] Profile page
+- [x] Profile page
     - User can update their profile, insert profile image
     - Stylize the profile page
 - [ ] Stylize the not-activated.php page

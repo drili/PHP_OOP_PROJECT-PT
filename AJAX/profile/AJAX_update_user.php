@@ -26,7 +26,6 @@
     $response = [
         "update_user_res" => $update_user_res
     ];
-
     echo json_encode($response);
 
     exit;

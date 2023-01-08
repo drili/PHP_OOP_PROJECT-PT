@@ -1,10 +1,10 @@
 <?php 
-    session_start(); 
+    session_start();
 ?>
 
 <div class="image-section">
     <span>
-        <img src="../assets/images/none.svg" alt="">
+        <img src="../assets/images/profile_pictures/<?php echo $_SESSION["profile_image"]; ?>" alt="">
     </span>
     <span>
         <h6 class="mb-0"><?php echo $_SESSION["username"]; ?></h6>
