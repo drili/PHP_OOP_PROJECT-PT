@@ -46,7 +46,13 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [x] Profile page
     - User can update their profile, insert profile image
     - Stylize the profile page
-- [ ] Stylize the not-activated.php page
+- [x] Stylize the not-activated.php page
+- [ ] Create "create_task" view
+    - Create database table (async)
+    - User be able to create task functionality, corresponding to table
+    - Latest createt tasks by user async-fetch
+- [ ] Task modal view
+    - ...
 - [ ] Setup "user_roles" table in database
 - [ ] Admin view
     - Admin can activate un-activated users (also de-activate)
