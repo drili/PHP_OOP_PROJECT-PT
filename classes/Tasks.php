@@ -19,4 +19,24 @@
 
             $this->db = new DBConnection($this->hostname, $this->username, $this->password, $this->database);
         }
+
+        public function createTask() {
+
+        }
+
+        public function updateTask() {
+
+        }
+
+        public function deleteTask() {
+
+        }
+
+        public function fetchTask() {
+
+        }
+
+        public function fetchLatestTasks() {
+
+        }
     }
