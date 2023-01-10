@@ -5,6 +5,16 @@
 
     // *** Include header.php & files
     require_once $current_directory . '/../parts/header.php';
+    require_once $current_directory . "/../classes/Sprints.php";
+    require_once $current_directory . "/../classes/User.php";
+
+    $sprints = new Sprints();
+    $valid_sprints = $sprints->getValidSprints();
+    $task_verticals = $sprints->getSprintVerticals();
+    $task_labels = $sprints->getSprintLabels();
+
+    $users = new User([]);
+    $active_users = $users->getAllActiveUser($db);
 ?> 
 
 <link rel="stylesheet" type="text/css" href="<?php echo $relative_directory; ?>/__css/pages/create-task.css">
@@ -70,19 +80,24 @@
                                                                     <div class="cell small-12">
                                                                         <span>
                                                                             <label for="task_description">Task Description</label>
-                                                                            <textarea name="task_description" id="" rows="6"></textarea>
+                                                                            <!-- <textarea name="task_description" id="" rows="6"></textarea> -->
+                                                                            <div class="task_description" id="" rows="6">lajhwdkjawhdkjawhdkjahwdkj haalwj dhjakjwdh kajwhd </div>
                                                                         </span>
                                                                     </div>
 
                                                                     <div class="cell small-12">
                                                                         <span>
-                                                                            <label for="customers">Customer</label>
-                                                                            <select required name="customers" id="customers">
-                                                                                <option value="" disabled selected>Select Customer</option>
-                                                                                <option value="Volvo">Volvo</option>
-                                                                                <option value="Saab">Saab</option>
-                                                                                <option value="Mercedes">Mercedes</option>
-                                                                                <option value="Audi">Audi</option>
+                                                                            <label for="customer">Customer</label>
+                                                                            <select required name="customer" id="customer">
+                                                                                <?php
+                                                                                    $sql_fetch_customers = "SELECT * FROM customers
+                                                                                    WHERE customer_enabled='1'";
+                                                                                    $sql_fetch_customers_res = $db->mysqli->query($sql_fetch_customers);
+                                                                                ?>
+                                                                                    <option value="" disabled selected>Select Customer</option>
+                                                                                <?php while($row = $sql_fetch_customers_res->fetch_assoc()) : ?>
+                                                                                    <option value="<?php echo $row["customer_id"]; ?>"><?php echo $row["customer_name"]; ?></option>
+                                                                                <?php endwhile; ?>
                                                                             </select>
                                                                         </span>
                                                                     </div>
@@ -90,26 +105,27 @@
                                                                     <div class="cell small-12">
                                                                         <label for="sprints">Sprint(s)</label>
                                                                         <select required class="js-example-basic-multiple" name="sprints[]" multiple="multiple">
-                                                                            <option value="AL" selected>Alabama</option>
-                                                                            <option value="WY">Wyoming</option>
-                                                                            <option value="KY">Kentucky</option>
-                                                                            <option value="NY">New York</option>
-                                                                            <option value="Volvo">Volvo</option>
-                                                                            <option value="Saab">Saab</option>
-                                                                            <option value="Mercedes">Mercedes</option>
-                                                                            <option value="Audi">Audi</option>
+                                                                            <?php $sprint_iterator = 0; ?>
+                                                                            <?php foreach($valid_sprints as $sprint) : ?>
+                                                                                <option value="<?php echo $sprint["sprint_id"]; ?>" <?php echo ($sprint_iterator == 0) ? "selected" : ""; ?>>
+                                                                                <?php echo $sprint["sprint_name"]; ?>
+                                                                                </option>
+
+                                                                                <?php $sprint_iterator++; ?>
+                                                                            <?php endforeach; ?>
                                                                         </select>
                                                                     </div>
 
                                                                     <div class="cell small-12 large-6">
                                                                         <span>
-                                                                            <label for="tabel_vertical">Task Vertical</label>
-                                                                            <select required name="tabel_vertical" id="tabel_vertical">
+                                                                            <label for="task_vertical">Task Vertical</label>
+                                                                            <select required name="task_vertical" id="task_vertical">
                                                                                 <option value="" disabled selected>Select Task Vertical</option>
-                                                                                <option value="Volvo">Volvo</option>
-                                                                                <option value="Saab">Saab</option>
-                                                                                <option value="Mercedes">Mercedes</option>
-                                                                                <option value="Audi">Audi</option>
+                                                                                <?php foreach($task_verticals as $tv) : ?>
+                                                                                    <option value="<?php echo $tv["task_vertical_id"]; ?>">
+                                                                                        <?php echo $tv["task_vertical_name"]; ?>
+                                                                                    </option>
+                                                                                <?php endforeach; ?>
                                                                             </select>
                                                                         </span>
                                                                     </div>
@@ -118,11 +134,11 @@
                                                                         <span>
                                                                             <label for="label">Label</label>
                                                                             <select required name="label" id="label">
-                                                                                <option value="" disabled selected>No Label</option>
-                                                                                <option value="Volvo">Volvo</option>
-                                                                                <option value="Saab">Saab</option>
-                                                                                <option value="Mercedes">Mercedes</option>
-                                                                                <option value="Audi">Audi</option>
+                                                                                <?php foreach($task_labels as $tl) : ?>
+                                                                                    <option value="<?php echo $tl["label_id"]; ?>" style="background:<?php echo $tl["label_color"]; ?>">
+                                                                                        <?php echo $tl["label_name"]; ?>
+                                                                                    </option>
+                                                                                <?php endforeach; ?>
                                                                             </select>
                                                                         </span>
                                                                     </div>
@@ -130,14 +146,11 @@
                                                                     <div class="cell small-12">
                                                                         <label for="persons">Select person(s)</label>
                                                                         <select required class="js-example-basic-multiple" name="persons[]" multiple="multiple">
-                                                                            <option value="AL">Alabama</option>
-                                                                            <option value="WY">Wyoming</option>
-                                                                            <option value="KY">Kentucky</option>
-                                                                            <option value="NY">New York</option>
-                                                                            <option value="Volvo">Volvo</option>
-                                                                            <option value="Saab">Saab</option>
-                                                                            <option value="Mercedes">Mercedes</option>
-                                                                            <option value="Audi">Audi</option>
+                                                                            <?php foreach($active_users as $users) : ?>
+                                                                                <option value="<?php echo $users["id"]; ?>">
+                                                                                    <?php echo $users["username"]; ?>
+                                                                                </option>
+                                                                            <?php endforeach; ?>
                                                                         </select>
                                                                     </div>
 

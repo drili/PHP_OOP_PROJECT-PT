@@ -52,7 +52,7 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
     - User be able to create task functionality, corresponding to table
     - Latest createt tasks by user async-fetch
 - [ ] Task modal view
-    - ...
+    - Modal view must be modular, can be used in different views
 - [ ] Setup "user_roles" table in database
 - [ ] Admin view
     - Admin can activate un-activated users (also de-activate)

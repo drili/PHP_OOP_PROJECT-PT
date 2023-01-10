@@ -168,4 +168,17 @@
                 return "INVALID_CREDENTIALS";
             }
         }
+
+        public function getAllActiveUser($db) {
+            $query = "SELECT * FROM users WHERE user_activated = 1";
+            $query_res = $db->mysqli->query($query);
+
+            $active_users = array();
+            while ($row = $query_res->fetch_assoc()) {
+                $active_users[] = $row;
+            }
+
+            return $active_users;
+
+        }
     }    
