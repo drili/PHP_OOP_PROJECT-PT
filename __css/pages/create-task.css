@@ -18,3 +18,32 @@
     box-shadow: none !important;
     font-size: var(--font-sm) !important;
 }
+
+.profile-activity.box-section .fetched-tasks-by-user .task-fetched-single {
+    background-color: var(--color-light-gray);
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all 0.35s var(--cubic-bezier);
+}
+.profile-activity.box-section .fetched-tasks-by-user .task-fetched-single:hover {
+    background-color: var(--color-gray);
+    transition: all 0.35s var(--cubic-bezier);
+}
+
+.profile-activity.box-section .fetched-tasks-by-user .task-fetched-single p {
+    margin-bottom: 5px !important;
+}
+
+.profile-activity.box-section .task-date {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-activity.box-section .task-date i {
+    margin-right: 10px;
+    transform: scale(0.6);
+}

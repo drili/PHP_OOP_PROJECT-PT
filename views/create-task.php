@@ -186,7 +186,12 @@
 
                                         <span>
                                             <p><b>Tasks created by you</b></p>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, similique.</p>
+                                            <hr>
+                                            <div class="fetched-tasks-by-user">
+                                                <div class="loader-outter mt-40">
+                                                    <div class='custom-loader'><i class='gg-spinner'></i></div>
+                                                </div>
+                                            </div>
                                         </span>
                                     </div>
                                 </div>

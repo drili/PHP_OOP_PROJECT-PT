@@ -35,9 +35,9 @@
     --font-11xl: 5rem;
     --font-12xl: 6rem;
 
-    --font-2xs-leading: 1.275;
-    --font-xs-leading: 1.875;
-    --font-sm-leading: 1.75;
+    --font-2xs-leading: 1.175;
+    --font-xs-leading: 1.275;
+    --font-sm-leading: 1.45;
     --font-md-leading: 1.75;
     --font-lg-leading: 1.625;
     --font-xl-leading: 1.625;
@@ -134,7 +134,7 @@ h6 {
 p,
 a {
     font-size: var(--font-md) !important;
-    line-height: var(--font-md-leading) !important;
+    line-height: var(--font-sm-leading) !important;
 }
 
 hr {
@@ -163,6 +163,12 @@ hr {
 }
 .mt-10 {
     margin-top: 10px !important;
+}
+.mt-20 {
+    margin-top: 20px !important;
+}
+.mt-40 {
+    margin-top: 40px !important;
 }
 .mr-10 {
     margin-right: 10px !important;

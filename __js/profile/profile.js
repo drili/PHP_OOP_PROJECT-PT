@@ -102,7 +102,7 @@ $(document).ready(function() {
     // *** ajaxFetchImageSection
     function ajaxFetchImageSection() {
         $.ajax({
-            url: "../AJAX/profile/fetch/AJAX_FETCH_image-section.php",
+            url: "../AJAX/profile/AJAX_FETCH_image-section.php",
             
             success: function(response) {
                 $(".user-profile").html(response);

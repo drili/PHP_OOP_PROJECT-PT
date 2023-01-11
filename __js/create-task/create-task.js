@@ -19,6 +19,16 @@ $(document).ready(function() {
         theme: 'snow'
     });
 
+    // *** SessionStorage handling
+    window.onload = function() {
+        var createTaskMessage = sessionStorage.getItem("createTaskMessage");
+        if (createTaskMessage) {
+            toastMessageSuccess("Success!", "Task has been created successfully");
+            sessionStorage.removeItem("createTaskMessage");
+        }
+    }
+    
+
     // *** Create Task form
     var form = $('.form-create-task');
 
@@ -92,9 +102,14 @@ $(document).ready(function() {
                         })
 
                         if (buttonChecker === "DEFAULT") {
-                            $(".validate-required").each(function() {
-                                $(this).val("");
-                            })
+                            sessionStorage.setItem('createTaskMessage', 'Task has been created successfully');
+                            window.location.reload();
+                        } else {
+                            var loaderComponent = Loader();
+                            $(".fetched-tasks-by-user").html(loaderComponent);
+                            setTimeout(() => {
+                                ajaxFetchLatestTasksByUser();
+                            }, 250);
                         }
                     } else if (data.query_status === "ERR_CREATING_TASK_TIME") {
                         toastMessageError("Error!", "Task low cannot be higher than task high.");
@@ -110,6 +125,25 @@ $(document).ready(function() {
                 }
             })
         }
-        
     })
+
+    // *** Fetch latest tasks by user
+    function ajaxFetchLatestTasksByUser() {
+        $.ajax({
+            type: "GET",
+            url: "../AJAX/create-task/AJAX_fetch_latest_tasks_by_user.php",
+
+            success: function(data) {
+                setTimeout(() => {
+                    $(".fetched-tasks-by-user").html(data);
+                }, 250);
+            },
+
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+                console.log({error});
+            }
+        })
+    }
+    ajaxFetchLatestTasksByUser();
 })
