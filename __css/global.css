@@ -311,6 +311,9 @@ input[type="submit"] {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.fail-input {
+    border: 2px solid var(--color-red) !important;
+}
 label {
     font-weight: 700 !important;
     margin-bottom: 10px !important;

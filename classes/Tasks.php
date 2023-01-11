@@ -12,6 +12,14 @@
         public $database;
 
         public $task_name;
+        public $task_low;
+        public $task_high; 
+        public $task_workflow_status; 
+        public $task_description;
+        public $sprint_id;
+        public $customer_id;
+        public $label_id;
+        public $created_by;
 
         public function __construct() {
             $this->hostname = $_ENV["HOSTNAME"];
@@ -23,7 +31,17 @@
         }
 
         public function createTask() {
-            $query = "INSERT INTO tasks
+            $task_name = mysqli_real_escape_string($this->db->mysqli, $this->task_name);
+            $task_low = mysqli_real_escape_string($this->db->mysqli, $this->task_low);
+            $task_high = mysqli_real_escape_string($this->db->mysqli, $this->task_high);
+            $task_description = mysqli_real_escape_string($this->db->mysqli, $this->task_description);
+            $customer_id = mysqli_real_escape_string($this->db->mysqli, $this->customer_id);
+            $label_id = mysqli_real_escape_string($this->db->mysqli, $this->label_id);
+            $task_vertical_id = mysqli_real_escape_string($this->db->mysqli, $this->task_vertical_id);
+            $user_id = mysqli_real_escape_string($this->db->mysqli, $this->user_id);
+
+            foreach ($this->sprint_id as $sprint_id) {
+                $query = "INSERT INTO tasks
                 (task_name, 
                 task_low, 
                 task_high, 
@@ -32,16 +50,39 @@
                 sprint_id, 
                 customer_id, 
                 label_id,
+                task_vertical_id,
                 created_by) VALUES
-                ('". $this->task_name ."',
-                '". $this->task_low ."',
-                '". $this->task_high ."',
-                '0',
-                '". $this->task_description ."',
-                '". $this->sprint_id ."',
-                '". $this->customer_id ."',
-                '". $this->label_id ."',
-                '". $this->user_id ."')";
+                ('". $task_name ."',
+                '". $task_low ."',
+                '". $task_high ."',
+                '". $sprint_id ."',
+                '". $task_description ."',
+                '". $sprint_id ."',
+                '". $customer_id ."',
+                '". $label_id ."',
+                '". $task_vertical_id ."',
+                '". $user_id ."')";
+    
+                $this->db->mysqli->query($query);
+
+                // *** Insert task persons into "tasks_persons"
+                $task_id_inserted = mysqli_insert_id($this->db->mysqli);
+                foreach ($this->task_persons as $person_id) {
+                    $query = "INSERT INTO tasks_persons
+                    (task_id,
+                    person_id) VALUES
+                    ('". $task_id_inserted ."',
+                    '". $person_id ."')";
+
+                    $this->db->mysqli->query($query);
+                }
+            }
+
+            if (mysqli_affected_rows($this->db->mysqli) > 0) {
+                return "SUCCESS_TASK_CREATED";
+            } else {
+                return "ERR_CREATING_TASK";
+            }
         }
 
         public function updateTask() {

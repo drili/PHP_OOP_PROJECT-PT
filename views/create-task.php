@@ -59,36 +59,38 @@
                                                                     <div class="cell small-12 large-7">
                                                                         <span>
                                                                             <label for="task_name">Task Name</label>
-                                                                            <input required type="text" name="task_name" value="">
+                                                                            <input class="validate-required" required type="text" name="task_name" value="">
                                                                         </span>
                                                                     </div>
 
                                                                     <div class="cell small-12 large-2">
                                                                         <span>
                                                                             <label for="task_low">Task Low</label>
-                                                                            <input required type="number" name="task_low" value="">
+                                                                            <input class="validate-required" required type="number" name="task_low" value="">
                                                                         </span>
                                                                     </div>
 
                                                                     <div class="cell small-12 large-2">
                                                                         <span>
                                                                             <label for="task_high">Task High</label>
-                                                                            <input required type="number" name="task_high" value="">
+                                                                            <input class="validate-required" required type="number" name="task_high" value="">
                                                                         </span>
                                                                     </div>
 
-                                                                    <div class="cell small-12">
+                                                                    <div class="cell small-12 cell-description">
                                                                         <span>
-                                                                            <label for="task_description">Task Description</label>
+                                                                            <div>
+                                                                                <label for="task_description">Task Description</label>
+                                                                                <div id="QuillEditor" class="task_description"></div>
+                                                                            </div>
                                                                             <!-- <textarea name="task_description" id="" rows="6"></textarea> -->
-                                                                            <div class="task_description" id="" rows="6">lajhwdkjawhdkjawhdkjahwdkj haalwj dhjakjwdh kajwhd </div>
                                                                         </span>
                                                                     </div>
 
                                                                     <div class="cell small-12">
                                                                         <span>
                                                                             <label for="customer">Customer</label>
-                                                                            <select required name="customer" id="customer">
+                                                                            <select required name="customer" id="customer" class="validate-required">
                                                                                 <?php
                                                                                     $sql_fetch_customers = "SELECT * FROM customers
                                                                                     WHERE customer_enabled='1'";
@@ -104,7 +106,7 @@
 
                                                                     <div class="cell small-12">
                                                                         <label for="sprints">Sprint(s)</label>
-                                                                        <select required class="js-example-basic-multiple" name="sprints[]" multiple="multiple">
+                                                                        <select required class="js-example-basic-multiple validate-required validate-required-select2" name="sprints[]" multiple="multiple">
                                                                             <?php $sprint_iterator = 0; ?>
                                                                             <?php foreach($valid_sprints as $sprint) : ?>
                                                                                 <option value="<?php echo $sprint["sprint_id"]; ?>" <?php echo ($sprint_iterator == 0) ? "selected" : ""; ?>>
@@ -119,7 +121,7 @@
                                                                     <div class="cell small-12 large-6">
                                                                         <span>
                                                                             <label for="task_vertical">Task Vertical</label>
-                                                                            <select required name="task_vertical" id="task_vertical">
+                                                                            <select required name="task_vertical" id="task_vertical" class="validate-required">
                                                                                 <option value="" disabled selected>Select Task Vertical</option>
                                                                                 <?php foreach($task_verticals as $tv) : ?>
                                                                                     <option value="<?php echo $tv["task_vertical_id"]; ?>">
@@ -145,7 +147,7 @@
 
                                                                     <div class="cell small-12">
                                                                         <label for="persons">Select person(s)</label>
-                                                                        <select required class="js-example-basic-multiple" name="persons[]" multiple="multiple">
+                                                                        <select required class="js-example-basic-multiple validate-required validate-required-select2" name="persons[]" multiple="multiple">
                                                                             <?php foreach($active_users as $users) : ?>
                                                                                 <option value="<?php echo $users["id"]; ?>">
                                                                                     <?php echo $users["username"]; ?>
@@ -156,8 +158,8 @@
 
                                                                     <div class="cell small-12">
                                                                         <span>
-                                                                            <input type="submit" class="btn-inline btn-main mt-5 mr-10" value="Create Task" name="create_task">
-                                                                            <input type="submit" class="btn-inline btn-white mt-5" value="Create Task - Keep settings" name="create_task_keep_settings">
+                                                                            <input type="submit" class="btn-inline btn-main mt-5 mr-10 btn-create-task-default" value="Create Task" name="create_task">
+                                                                            <input type="submit" class="btn-inline btn-white mt-5 btn-create-task-w-settings" value="Create Task - Keep settings" name="create_task_keep_settings">
                                                                         </span>
 
                                                                         <span>
@@ -183,7 +185,7 @@
                                         <h5>Recent Created Tasks</h5>
 
                                         <span>
-                                            <p><b>Lorem ipsum dol.</b></p>
+                                            <p><b>Tasks created by you</b></p>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, similique.</p>
                                         </span>
                                     </div>
