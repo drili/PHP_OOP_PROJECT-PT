@@ -136,6 +136,7 @@ $(document).ready(function() {
             success: function(data) {
                 setTimeout(() => {
                     $(".fetched-tasks-by-user").html(data);
+                    clickTasksModal();
                 }, 250);
             },
 
@@ -146,4 +147,19 @@ $(document).ready(function() {
         })
     }
     ajaxFetchLatestTasksByUser();
+
+    // *** Tasks Modal
+    function clickTasksModal() {
+        $(".task-single").click(function(e) {
+            e.preventDefault();
+
+            var dataTaskId = $(this).attr("data-task-id");
+            var taskModalEventData = new CustomEvent("taskModalEvent", {
+                "detail": {
+                    "dataTaskId" : dataTaskId
+                }
+            })
+            document.dispatchEvent(taskModalEventData);
+        })
+    }
 })

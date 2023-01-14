@@ -20,5 +20,6 @@
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
         <script src="<?php echo $relative_directory; ?>/__js/global.js"></script>
+        <script src="<?php echo $relative_directory; ?>/__js/event-handler.js"></script>
     </body>
 </html>

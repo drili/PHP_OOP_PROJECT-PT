@@ -228,10 +228,14 @@ p.small-p {
 
 button,
 button *,
-input,
 a {
     font-family: var(--font-var) !important;
     font-weight: 500 !important;
+}
+
+input {
+    font-family: var(--font-var-sans) !important;
+    font-weight: 500 !important; 
 }
 
 .btn {

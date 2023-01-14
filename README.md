@@ -56,6 +56,7 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
         - Use jQuery modal
         - JavaScript component or simple JS file, listens for onlick task event, fetches data with AJAX (?)
         - Using dataLayer events to update/fetch data outside task (?)
+        - Stylize/structure the task modal view
 - [ ] Setup "user_roles" table in database
 - [ ] Admin view
     - Admin can activate un-activated users (also de-activate)

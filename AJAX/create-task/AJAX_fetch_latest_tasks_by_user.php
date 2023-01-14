@@ -23,7 +23,7 @@
 
 <?php if ($response["query_status"] !== "ERR_FETCHING_TASKS_BY_USER") : ?>
     <?php foreach($response["query_status"] as $value) : ?>
-       <div class="task-fetched-single task-fetched-<?php echo $value["task_id"]; ?>">
+       <div class="task-single task-fetched-single task-fetched-<?php echo $value["task_id"]; ?>" data-task-id="<?php echo $value["task_id"]; ?>">
             <h6><?php echo $value["task_name"]; ?></h6>
 
             <div class="task-date">
