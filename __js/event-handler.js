@@ -11,7 +11,26 @@ $(document).ready(function() {
 
             $('.modal').modal({
                 fadeDuration: 250
-            });
+            }, ajaxFetchTask(dataTaskId));
+
+            function ajaxFetchTask(dataTaskId) {
+                $.ajax({
+                    type: "POST",
+                    url: "../AJAX/globals/AJAX_fetch_task.php",
+                    data: {
+                        dataTaskId : dataTaskId
+                    },
+
+                    success: function(response) {
+                        console.log({response});
+                        $(".modal").html(response);
+                    },
+
+                    error: function(xhr, error, status) {
+                        console.log(xhr.responseText);
+                    }
+                })
+            }
         }
     });
 })

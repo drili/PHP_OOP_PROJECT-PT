@@ -94,7 +94,21 @@
         }
 
         public function fetchTask() {
+            $task_id = mysqli_real_escape_string($this->db->mysqli, $this->task_id);
 
+            $query = "SELECT * FROM tasks WHERE task_id = '".$task_id."'";
+            $query_res = $this->db->mysqli->query($query);
+
+            if ($query_res->num_rows > 0) {
+                $task_array = array();
+                while ($row = $query_res->fetch_assoc()) {
+                    $task_array[] = $row;
+                }
+
+                return $task_array;
+            } else {
+                return "ERR_FETCHING_TASK";
+            }
         }
 
         public function fetchLatestTasksByUser() {
