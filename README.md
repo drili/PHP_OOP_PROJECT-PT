@@ -24,10 +24,7 @@ DATABASE=""
 $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 ```
 
-### TODO list
-<details>
-<summary>Tasks List</summary>
-<div>
+### Task list
 - [x] Setup dynamic directories
 - [x] Setup folder and file structure
 - [x] Setup database connection
@@ -63,17 +60,10 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [ ] Admin view
     - Admin can activate un-activated users (also de-activate)
     - Admin can delete and modify users
-</div>
-</details>
 
-##### 
-<details>
-<summary>Additonal future tasks</summary>
-<div>
+##### Additonal future tasks
 - [ ] Add a stripe payment method
     - Create an overview page where users can buy access
     - New database and new admin user will be created upon payment
     - Information will be sent to user email
     - Function to check if monthly billing has been paid. Make application unaccessable if payment returns failure/error.
-</div>
-</details>
