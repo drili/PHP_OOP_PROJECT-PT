@@ -9,13 +9,6 @@ $(document).ready(function() {
         let darkmodeChecker = localStorage.getItem("darkmodeChecker")
     }
 
-    // if (darkmodeChecker === "darkmode") {
-    //     $(".sidebar-section .checkbox").prop("checked", true)
-    //     $("body").addClass("darkmode")
-    // }
-
-    console.log(darkmodeChecker)
-
     checkbox.addEventListener('change', () => {
         let darkmodeCheckerState = localStorage.getItem("darkmodeChecker");
         if (darkmodeCheckerState === "lightmode") {
