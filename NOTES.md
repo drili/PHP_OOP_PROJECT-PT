@@ -9,6 +9,8 @@
         1. https://getcssscan.com/css-box-shadow-examples
     - jQuery Toast
         1. https://kamranahmed.info/toast
+    - jQuery Modal
+        1. https://jquerymodal.com/
 
 # Inspiration
     - https://dribbble.com/shots/20267926-Core-Dashboard-Builder-Customer-Components

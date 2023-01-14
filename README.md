@@ -53,6 +53,9 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
     - Latest createt tasks by user async-fetch
 - [ ] Task modal view
     - Modal view must be modular, can be used in different views
+        - Use jQuery modal
+        - JavaScript component or simple JS file, listens for onlick task event, fetches data with AJAX (?)
+        - Using dataLayer events to update/fetch data outside task (?)
 - [ ] Setup "user_roles" table in database
 - [ ] Admin view
     - Admin can activate un-activated users (also de-activate)

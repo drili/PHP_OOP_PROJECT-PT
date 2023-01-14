@@ -58,6 +58,10 @@
 
         <!-- *** Quill Rich Text -->
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+        <!-- *** jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     </head>
         <body class="<?php if(isset($_SESSION["darkmode"])) : echo ($_SESSION["darkmode"] === "darkmode") ? "darkmode" : ""; endif;?>">
 
