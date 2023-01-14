@@ -24,7 +24,7 @@
 <?php if ($response["query_status"] !== "ERR_FETCHING_TASKS_BY_USER") : ?>
     <?php foreach($response["query_status"] as $value) : ?>
        <div class="task-fetched-single task-fetched-<?php echo $value["task_id"]; ?>">
-            <p><b><?php echo $value["task_name"]; ?></b></p>
+            <h6><?php echo $value["task_name"]; ?></h6>
 
             <div class="task-date">
                 <i class="gg-alarm"></i>
