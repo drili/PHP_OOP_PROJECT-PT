@@ -408,7 +408,8 @@ label {
 }
 
 @media screen and (min-width: 1024px) {
-    .page-wrapper .cell-main .cell-padding-right {
+    .page-wrapper .cell-main .cell-padding-right,
+    .page-wrapper-modal .cell-padding-right {
         padding-right: 30px;
     }
 }

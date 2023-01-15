@@ -44,8 +44,7 @@
                 $query = "INSERT INTO tasks
                 (task_name, 
                 task_low, 
-                task_high, 
-                task_workflow_status, 
+                task_high,  
                 task_description, 
                 sprint_id, 
                 customer_id, 
@@ -55,7 +54,6 @@
                 ('". $task_name ."',
                 '". $task_low ."',
                 '". $task_high ."',
-                '". $sprint_id ."',
                 '". $task_description ."',
                 '". $sprint_id ."',
                 '". $customer_id ."',
