@@ -96,7 +96,12 @@
         public function fetchTask() {
             $task_id = mysqli_real_escape_string($this->db->mysqli, $this->task_id);
 
-            $query = "SELECT * FROM tasks WHERE task_id = '".$task_id."'";
+            // $query = "SELECT * FROM tasks WHERE task_id = '".$task_id."'";
+            $query = "SELECT *
+            FROM tasks
+            LEFT JOIN sprints ON tasks.sprint_id = sprints.sprint_id
+            WHERE task_id = '".$task_id."'";
+
             $query_res = $this->db->mysqli->query($query);
 
             if ($query_res->num_rows > 0) {
