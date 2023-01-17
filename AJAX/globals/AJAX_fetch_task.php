@@ -22,13 +22,32 @@
 ?>
 
 <?php if ($response["query_status"] !== "ERR_FETCHING_TASKS_BY_USER") : ?>
+    <?php
+        $response_query = $response["query_status"][0];
+    ?>
     <div class="page-wrapper-modal">
         <section>
             <div class="task-modal">
 
                 <div class="grid-container-fluid">
                     <div class="grid-x">
+
                         <div class="cell small-12 large-8 cell-padding-right">
+
+                            <section class="form-top mb-40">
+                                <label for="" class="label-custom mr-10" style="border: 1px solid <?php echo $response_query["customer_color"]; ?>; color: <?php echo $response_query["customer_color"]; ?> !important">
+                                    <?php echo $response_query["customer_name"]; ?>
+                                </label>
+
+                                <label for="" class="label-custom mr-10" style="">
+                                    <?php echo $response_query["task_vertical_name"]; ?>
+                                </label>
+
+                                <label for="" class="label-custom mr-10" style="border: 1px solid <?php echo $response_query["label_color"]; ?>; color: <?php echo $response_query["label_color"]; ?> !important;">
+                                    <?php echo $response_query["label_name"]; ?>
+                                </label>
+                            </section>
+
                             <form action="" class="form-task-edit form-flex">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque labore ducimus sed, magni aliquam odio.</p>
                             </form>

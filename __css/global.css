@@ -346,6 +346,14 @@ label {
     font-weight: 500 !important;
     margin-bottom: 10px !important;
 }
+.label-custom {
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid var(--color-primary);
+}
 .form-element {
     border: 1px solid #eee;
     border-radius: var(--border-radius) !important;
