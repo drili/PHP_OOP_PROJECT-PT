@@ -388,6 +388,9 @@ label {
 .grid-x-main {
     height: 100%;
 }
+.page-wrapper.page-wrapper-modal {
+    height: auto;
+}
 
 .page-wrapper .grid-x-vert-center {
     flex-direction: column;
@@ -549,4 +552,15 @@ label {
     min-width: 80vw;
     min-height: 80vh;
     border-radius: var(--border-radius) !important;
+    background-color: var(--color-light-gray) !important;
+}
+
+#QuillEditorModal {
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: scroll;
+    border-radius: 0 0 20px 20px !important;
+    border: 2px solid var(--color-light-gray) !important;
+    box-shadow: none !important;
+    font-size: var(--font-sm) !important;
 }

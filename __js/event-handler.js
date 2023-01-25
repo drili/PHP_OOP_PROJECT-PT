@@ -16,7 +16,7 @@ $(document).ready(function() {
             function ajaxFetchTask(dataTaskId) {
                 $.ajax({
                     type: "POST",
-                    url: "../AJAX/globals/AJAX_fetch_task.php",
+                    url: "../AJAX/globals/AJAX_fetch_modal_task.php",
                     data: {
                         dataTaskId : dataTaskId
                     },
