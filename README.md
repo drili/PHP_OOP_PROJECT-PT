@@ -65,6 +65,8 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [ ] Archive deleted tasks
     - Possibility to delete multiple tasks
     - Tasks can be permanently deleted on "trash" view
+- [ ] Slack notifications
+    - If user has not registered enough time by friday during the week, send a slack notification (once pr. week)
 
 ##### Additonal future tasks
 - [ ] Add a stripe payment method
