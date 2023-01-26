@@ -62,6 +62,9 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
 - [ ] Admin view
     - Admin can activate un-activated users (also de-activate)
     - Admin can delete and modify users
+- [ ] Archive deleted tasks
+    - Possibility to delete multiple tasks
+    - Tasks can be permanently deleted on "trash" view
 
 ##### Additonal future tasks
 - [ ] Add a stripe payment method
