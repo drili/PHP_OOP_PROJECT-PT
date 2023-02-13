@@ -11,7 +11,7 @@
     // *** AuthController
     require $relative_directory . "/lib/AuthController.php";
     AuthControllerLogin($project_directory);
-    AuthControllerActivated($project_directory);
+    AuthControllerActivated($project_directory, $_SESSION["user_id"]);
 
     // *** Page structure components
     require $relative_directory . "/components/Topbar.php";

@@ -137,7 +137,7 @@
                     $_SESSION["user_id"] = $row["id"];
                     $_SESSION["username"] = $row["username"];
                     $_SESSION["email"] = $row["email"];
-                    $_SESSION["user_activated"] = $row["user_activated"];
+                    // $_SESSION["user_activated"] = $row["user_activated"];
                     $_SESSION["user_title"] = $row["user_title"];
                     $_SESSION["password"] = $this->password;
                     $_SESSION["profile_image"] = $row["profile_image"];

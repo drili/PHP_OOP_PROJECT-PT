@@ -16,8 +16,9 @@
         }
     }
     
-    function AuthControllerActivated($project_directory) {
+    function AuthControllerActivated($project_directory, $user_id) {
         $current_url = $_SERVER["REQUEST_URI"];
+        $user_id = $user_id;
 
         if (isset($_SESSION["logged_in"])) {
             if ($_SESSION["user_activated"] === "0") {
