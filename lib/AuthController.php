@@ -16,12 +16,18 @@
         }
     }
     
-    function AuthControllerActivated($project_directory, $user_id) {
+    function AuthControllerActivated($project_directory, $user_id, $db) {
         $current_url = $_SERVER["REQUEST_URI"];
         $user_id = $user_id;
 
+        $sql_user = "SELECT * FROM users WHERE id='".$user_id."'";
+        $sql_user_res = $db->mysqli->query($sql_user);
+        $user_rows = mysqli_fetch_assoc($sql_user_res);
+
+        $user_activated = $user_rows["user_activated"];
+
         if (isset($_SESSION["logged_in"])) {
-            if ($_SESSION["user_activated"] === "0") {
+            if ($user_activated === "0") {
                 if (strpos($current_url, "not-activated.php") !== false) {
                     // ...
                 } else {
@@ -30,5 +36,7 @@
             } else if (strpos($current_url, "not-activated.php") !== false) {
                 header("Location: ". $project_directory ."/views/dashboard.php");
             }
+
+            $_SESSION["user_activated"] = $user_activated;
         }
     }
