@@ -63,6 +63,9 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
     - Admin can activate un-activated users (also de-activate)
     - Admin can delete and modify users
     - More admin features...
+- [ ] Task view
+    - CRUD tasks options
+    - Multi select/edit options
 - [ ] Archive deleted tasks
     - Possibility to delete multiple tasks
     - Tasks can be permanently deleted on "trash" view
