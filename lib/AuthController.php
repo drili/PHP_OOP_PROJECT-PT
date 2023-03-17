@@ -18,7 +18,6 @@
     
     function AuthControllerActivated($project_directory, $user_id, $db) {
         $current_url = $_SERVER["REQUEST_URI"];
-        $user_id = $user_id;
 
         $sql_user = "SELECT * FROM users WHERE id='".$user_id."'";
         $sql_user_res = $db->mysqli->query($sql_user);
