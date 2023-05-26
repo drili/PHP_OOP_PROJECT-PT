@@ -160,7 +160,6 @@
 
                     // header("Location: /dashboard.php");
                     return $_SESSION["logged_in"];
-                    exit;
                 } else {
                     return "INVALID_CREDENTIALS";
                 }

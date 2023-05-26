@@ -63,6 +63,9 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
     - Admin can activate un-activated users (also de-activate)
     - Admin can delete and modify users
     - More admin features...
+- [ ] Task view
+    - CRUD tasks options
+    - Multi select/edit options
 - [ ] Archive deleted tasks
     - Possibility to delete multiple tasks
     - Tasks can be permanently deleted on "trash" view
@@ -75,3 +78,4 @@ $root_directory = $_SERVER['DOCUMENT_ROOT'] . "{{YOUR_PROJECT_DIRECTORY_NAME}}";
     - New database and new admin user will be created upon payment
     - Information will be sent to user email
     - Function to check if monthly billing has been paid. Make application unaccessable if payment returns failure/error.
+- [ ] Add WebSocket for updates etc / different use cases
