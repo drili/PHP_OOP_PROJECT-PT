@@ -281,6 +281,10 @@ input {
 .btn-inline.btn.btn-light-gray {
     background-color: var(--color-light-gray);
 }
+.btn.btn-danger,
+.btn-inline.btn-danger {
+    background-color: var(--color-red-light);
+}
 
 .box-section {
     background: var(--color-white);
@@ -351,8 +355,9 @@ label {
     margin-bottom: 10px !important;
     border-radius: var(--border-radius);
     display: inline-block;
-    padding: 5px 15px;
+    padding: 2px 10px;
     border: 1px solid var(--color-primary);
+    font-size: var(--font-xs);
 }
 .form-element {
     border: 1px solid #eee;
@@ -401,7 +406,9 @@ label {
     gap: 20px;
 }
 
-.page-wrapper .grid-x-space-between {
+.page-wrapper .grid-x-space-between,
+.custom-justify-between {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -553,6 +560,16 @@ label {
     min-height: 80vh;
     border-radius: var(--border-radius) !important;
     background-color: var(--color-light-gray) !important;
+    padding: 40px 60px;
+}
+
+.jquery-modal .modal .section-task-modal-top {
+    display: flex;
+    gap: 20px;
+}
+.jquery-modal .modal .section-task-modal-top p {
+    margin-bottom: 5px;
+    font-weight: bold !important;
 }
 
 #QuillEditorModal {

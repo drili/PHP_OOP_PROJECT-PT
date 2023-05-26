@@ -34,18 +34,27 @@
 
                         <div class="cell small-12 large-8 cell-padding-right">
 
-                            <section class="form-top mb-40">
-                                <label for="" class="label-custom mr-10" style="border: 1px solid <?php echo $response_query["customer_color"]; ?>; color: <?php echo $response_query["customer_color"]; ?> !important">
-                                    <?php echo $response_query["customer_name"]; ?>
-                                </label>
+                            <section class="form-top mb-20 section-task-modal-top">
+                                <span>
+                                    <p class="small-p">Customer:</p>
+                                    <label for="" class="label-custom mr-10" style="border: 1px solid <?php echo $response_query["customer_color"]; ?>; color: <?php echo $response_query["customer_color"]; ?> !important">
+                                        <?php echo $response_query["customer_name"]; ?>
+                                    </label>
+                                </span> 
 
-                                <label for="" class="label-custom mr-10" style="">
-                                    <?php echo $response_query["task_vertical_name"]; ?>
-                                </label>
+                                <span>
+                                    <p class="small-p">Vertical:</p>
+                                    <label for="" class="label-custom mr-10" style="">
+                                        <?php echo $response_query["task_vertical_name"]; ?>
+                                    </label>
+                                </span>
 
-                                <label for="" class="label-custom mr-10" style="border: 1px solid <?php echo $response_query["label_color"]; ?>; color: <?php echo $response_query["label_color"]; ?> !important;">
-                                    <?php echo $response_query["label_name"]; ?>
-                                </label>
+                                <span>
+                                    <p class="small-p">Label:</p>
+                                    <label for="" class="label-custom mr-10" style="border: 1px solid <?php echo $response_query["label_color"]; ?>; color: <?php echo $response_query["label_color"]; ?> !important;">
+                                        <?php echo $response_query["label_name"]; ?>
+                                    </label>
+                                </span>
                             </section>
 
                             <div class="content box-section">
@@ -87,7 +96,7 @@
                                                     </span>
                                                 </div>
 
-                                                <div class="cell small-12">
+                                                <div class="cell small-12 custom-justify-between">
                                                     <span>
                                                         <input type="submit" class="btn-inline btn-main mt-5 mr-10 btn-update-task" value="Update task" name="update_task">
                                                     </span>

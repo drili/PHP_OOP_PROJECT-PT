@@ -34,13 +34,13 @@
 }
 
 .profile-activity.box-section .fetched-tasks-by-user .task-fetched-single p {
-    margin-bottom: 5px !important;
+    margin-bottom: 0px !important;
 }
 
 .profile-activity.box-section .task-date {
     margin-top: 10px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .profile-activity.box-section .task-date i {

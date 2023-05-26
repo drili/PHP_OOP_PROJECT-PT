@@ -35,6 +35,6 @@
     <?php endforeach; ?>
 <?php else : ?>
     <div class="fetch-error">
-        <p>There was an error fetching data.</p>
+        <p>No created tasks were found.</p>
     </div>
 <?php endif; ?>
