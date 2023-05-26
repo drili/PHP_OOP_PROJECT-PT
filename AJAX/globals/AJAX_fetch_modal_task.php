@@ -32,8 +32,7 @@
                 <div class="grid-container-fluid">
                     <div class="grid-x">
 
-                        <div class="cell small-12 large-8 cell-padding-right">
-
+                        <div class="cell small-12">
                             <section class="form-top mb-20 section-task-modal-top">
                                 <span>
                                     <p class="small-p">Customer:</p>
@@ -56,6 +55,9 @@
                                     </label>
                                 </span>
                             </section>
+                        </div>
+
+                        <div class="cell small-12 large-8 cell-padding-right">
 
                             <div class="content box-section">
                                 <div>
@@ -111,7 +113,15 @@
                         </div>
 
                         <div class="cell small-12 large-4">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quidem similique sapiente eveniet suscipit repellat, laudantium eum sunt maiores deserunt hic vitae, ducimus dolore quod aliquam, quia ea explicabo velit?</p>
+                            <div class="content-functionality box-section">
+                                
+                                <div class="functionality-headline">
+                                    <h5>Functionalities</h5>
+                                    <p>Change additional task settings</p>
+                                    <hr>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
